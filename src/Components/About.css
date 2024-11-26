@@ -1,0 +1,43 @@
+.about-section {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-container {
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap; /* Поддержка адаптивности */   
+    max-width: 1200px; /* Ограничиваем ширину контейнера */
+    align-items: center;
+    gap: 2rem; /* Отступы между элементами */
+}
+  
+.about-photo img {
+    width: 250px; /* Размер фото */
+    height: 250px;
+    border-radius: 50%; /* Закругленные края */
+    object-fit: cover; /* Обрезка изображения для заполнения */
+    border: 5px solid #ddd; /* Рамка вокруг фото */
+}
+  
+.about-info {
+    flex: 1; /* Занимает оставшееся пространство */
+    text-align: left; /* Текст слева */
+}
+  
+.about-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+  
+.about-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1rem;
+}
+  

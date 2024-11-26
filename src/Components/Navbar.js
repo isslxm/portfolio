@@ -1,19 +1,44 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import '../Components/Navbar.css';
+import { Link } from 'react-scroll';
+import '../App.css'
 
-const Navbar = () => {
-    return (
-        <nav className="navbar">
-            <h1>My Website</h1>
-            <div className="nav-links">
-                <Link to="/">Home</Link>
-                <Link to="/first-year">First Year Students</Link>
-                <Link to="/projects">Projects</Link>
-                <Link to="/contact">Contact</Link>
-            </div>
-        </nav>
-    );
-};
+const Navbar = () => (
+  <header className="navbar">
+    <nav>
+      <ul>
+        <li>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            className="nav-button"
+          >
+            About
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={500}
+            className="nav-button"
+          >
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="nav-button"
+          >
+            Contact
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  </header>
+);
 
 export default Navbar;

@@ -1,25 +1,30 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
-import Home from './Pages/Home';
-import FirstYear from './Pages/FirstYear';
-import '../src/Components/Footer.css';
-import '../src/Components/Navbar.css';
+import About from './Components/About';
+import Projects from './Components/Projects';
+import Contact from './Components/Contact';
+import './App.css';
 
-const App = () => {
-    return (
-        <>
-            <Navbar />
-            <div className="main-content">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/first-year" element={<FirstYear />} />
-                </Routes>
-            </div>
-            <Footer />
-        </>
-    );
-};
+function App() {
+  return (
+    <div className="App">
+      <Navbar />
+
+      <main>
+        <section id="about">
+          <About />
+        </section>
+
+        <section id="projects">
+          <Projects />
+        </section>
+
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
+    </div>
+  );
+}
 
 export default App;
