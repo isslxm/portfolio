@@ -15,20 +15,24 @@ const projects = [
 
 ]
 
-
-
 const Projects = () => (
-  <section id="projects" className="section projects">
+  <section id="projects" className="projects-section">
     <h1>My Projects</h1>
-    <div className="project-list">
-      <div className="project">
-        <h3>Project 1</h3>
-        <p>Short description of project 1.</p>
-      </div>
-      <div className="project">
-        <h3>Project 2</h3>
-        <p>Short description of project 2.</p>
-      </div>
+    <div className="projects-container">
+      {projects.map((project, index) => (
+        <div key={index} className="project-card">
+          <div className="project-info">
+            <h2>{project.title}</h2>
+            <p>{project.description}</p>
+            <a href={project.github} target="_blank" rel="noopener noreferrer">
+              View on GitHub
+            </a>
+          </div>
+          <div className="project-image">
+            <img src={project.image} alt={`${project.title} screenshot`} />
+          </div>
+        </div>
+      ))}
     </div>
   </section>
 );

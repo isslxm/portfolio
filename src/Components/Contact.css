@@ -1,28 +1,46 @@
-/* .btn-6 {
-    $btn-color: random-color($max:200);
-    $btn-color-dark: shade($btn-color, 40%);
-      color: tint($btn-color);
-    
-    span {
-      @include absolute();
-      display: block;
-      @include size(0);
-      border-radius: 50%;
-      background-color: $btn-color-dark;
-      transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-    }
-    
-    &:hover {
-      color: tint($btn-color, 75%);
-      
-      span {
-        @include size(225%, $btn-width*2.25);
-      }
-    }
-    
-    &:active {
-      background-color: $btn-color;
-    }
-  } */
+.contact-section {
+  padding: 4rem 2rem;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: #333;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.contact-icon {
+  color: #007bff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.2);
+  color: #0056b3;
+}
